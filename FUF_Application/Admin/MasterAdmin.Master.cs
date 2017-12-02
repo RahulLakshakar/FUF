@@ -11,6 +11,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace FUFApplication.Admin
 {
@@ -31,6 +33,10 @@ namespace FUFApplication.Admin
                 lbl_session.Text = "<span style='font-size:15px;color:#fff;'>Welcome..</span>" + ds.Tables["AdminData"].Rows[0]["AdminName"].ToString();
                 userImage.ImageUrl = ds.Tables["AdminData"].Rows[0]["ImagePath"].ToString();
             }
+            string pageName = Path.GetFileName(Request.Path);
+            string[] Page = pageName.Split(new string[] { "." }, StringSplitOptions.None);
+            lbl_pageHeading.Text = Page[0].ToString();
+            page_icon.Attributes["class"] = "fa fa-" + Page[0].ToString().ToLower();
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)

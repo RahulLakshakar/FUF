@@ -57,10 +57,19 @@
                 <a href="#"><li class="menu_list"><i class="fa fa-gears" aria-hidden="true" ></i> Master Settings</li></a>
             </ul>
         </div>
-        <div id="right"></div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+        <div id="right">
+            <div id="container" class="container">
+                <div id="page_heading_block">
+                    <i id="page_icon" class="fa" aria-hidden="true" runat="server"></i>
+                    <asp:Label ID="lbl_pageHeading" CssClass="page-heading" runat="server" Text="Label"></asp:Label>
+                </div>
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            
+        </div>
     </div>
     </form>
 </body>
