@@ -1,0 +1,166 @@
+﻿body {
+    margin:0;
+    padding:0;
+  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+a {
+outline:none;
+text-decoration:none;
+}
+
+#header {
+width:98%;
+height:100px;
+background:#386dae;
+padding-left:2%;
+}
+
+    #header div {
+    display:inline-block;
+    }
+
+#session {
+position:absolute;
+right:3%;
+top:20px;
+}
+
+.session {
+color:#fffb40;
+text-transform:capitalize;
+}
+.button {
+width:100px;
+height:35px;
+background:#fffb40;
+border:none;
+color:#386dae;
+font-size:15px;
+}
+
+#nav {
+list-style:none;
+margin-top:65px;
+width:50%;
+float:right;
+margin-right:1%;
+padding:10px 0 10px 50px;
+}
+
+    #nav li {
+    display:inline-block;
+    margin-left:5%;
+    }
+
+        #nav li a {
+        color:#fff;
+        letter-spacing:1px;
+        font-weight:600;
+        font-size:17px;
+        transition:all ease-in-out 0.5s;
+        -webkit-transition:all ease-out 0.5s;
+        }
+
+            #nav li:hover a{
+            color:#fffb40;
+            }
+#footer {
+height:80px;
+width:100%;
+background-color:#386dae;
+position:absolute;
+top:auto;
+margin-top:50px;
+}
+
+/*****Home*****/
+
+#div_welcome {
+text-align:center;
+}
+
+.lbl_welcome {
+color:#00ca23;
+font-size:30px;
+text-transform:capitalize;
+}
+
+#user_panel {
+width:80%;
+height:auto;
+padding:50px 5% 50px 6%;
+border:0px solid #808080;
+margin-left:5%;
+margin-top:50px;
+-webkit-box-shadow: 6px 9px 73px -9px rgba(161,161,161,1);
+-moz-box-shadow: 6px 9px 73px -9px rgba(161,161,161,1);
+box-shadow: 6px 9px 73px -9px rgba(161,161,161,1);
+border-radius:0px;
+}
+
+.panel_list{
+    width:95%;
+    margin-left:-2%;
+}
+
+    .panel_list li {
+    display:inline-block;
+    width:17%;
+    padding:30px 20px 0px 20px;
+    height:180px;
+    border:2px solid rgb(203, 203, 203);
+    margin-left:3%;
+    border-radius:20px;
+    text-align:center;
+      transition:all ease-in-out 0.5s;
+        -webkit-transition:all ease-out 0.5s;
+    }
+
+.user_option_heading {
+font-size:25px;
+letter-spacing:0.2px;
+
+}
+
+#up{
+color:#ff6a00;
+}
+
+    #up:hover {
+    background-color:#ff6a00;
+    color:#fff;
+    border-color:#ff6a00;
+    }
+
+
+#pi {
+color:#00ca23;
+}
+
+ #pi:hover {
+    background-color:#00ca23;
+    color:#fff;
+    border-color:#00ca23;
+    }
+
+#sc{
+color:#386dae;
+}
+
+#sc:hover {
+    background-color:#386dae;
+    color:#fff;
+    border-color:#386dae;
+    }
+
+#gf{
+color:#fffb40;
+}
+
+#gf:hover {
+    background-color:#fffb40;
+    color:#fff;
+    border-color:#fffb40;
+    }

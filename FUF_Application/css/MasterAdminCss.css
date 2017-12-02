@@ -1,0 +1,132 @@
+﻿body {
+    margin:0;
+    padding:0;
+    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+outline:0;
+text-decoration:none;
+}
+
+ul {
+list-style:none;
+}
+
+#header {
+width:100%;
+height:80px;
+background-color:#386dae;
+position:fixed;
+}
+
+    #header table {
+    width:100%;
+    }
+
+
+    #header #user_ul .main_list {
+    display:inline-block;
+    }
+
+.timer {
+color:#fff;
+letter-spacing:0.5px;
+}
+
+.session {
+margin-top:-20px;
+color:#ffd800;
+font-size:18px;
+letter-spacing:1px
+}
+.userImage {
+width:40px;
+border-radius:100%;
+margin-top:-27px;
+cursor:pointer;
+}
+
+   
+#user_option {
+ background: none repeat scroll 0 0 #F8F8F8;
+    border: 5px solid #DFDFDF;
+    color: #717171;
+    font-size: 13px;
+   height:auto;
+    width:130px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    float:right;
+    margin-right:2%;
+    right:-1%;
+    margin-top:2px;
+    display:none;
+    box-shadow: 6px 9px 73px -9px rgba(161,161,161,1);
+}
+
+#user_option:after{
+    content:'';
+    position:absolute;
+    top:-10px;
+    width:10px;
+    height:10px;
+    border-top:5px solid #dfdfdf;
+    border-left:5px solid #dfdfdf;
+    background:#f8f8f8;
+    left:50%;
+    margin-left:25px;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}  
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+ #image:hover  #user_option {
+    display:block;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+    }
+
+#left {
+width:15%;
+height:100vh;
+background-color:#386dae;
+position:fixed;
+top:80px;
+}
+#admin_menu {
+width:100%;
+margin-left:-20%;
+}
+#admin_menu a{
+color:#fff;
+}
+
+#admin_menu li{
+border-bottom:1px solid rgba(255, 255, 255, 0.39);
+width:89%;
+padding:10px 0 10px 20px ;
+  
+}
+
+    #admin_menu i {
+    color:#fffa00;
+    font-size:20px;
+    }
+
+    #admin_menu li:hover {
+    border-right:5px solid #ffd800;
+    background-color:#4e75a5;
+    }
+

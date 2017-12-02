@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="FUFApplication.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/MasterPage2.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="header">
+            <div id="logo">
+                <img src="images/FUF6.png" width="180px"/>
+            </div>
+            <div id="session">
+                <table>
+                    <tr>
+                        <td style="padding-right:10px"> <asp:Label ID="lbl_username" CssClass="session" runat="server" Text=""></asp:Label></td>
+                        <td> <asp:Button ID="btn_logout" Style="cursor:pointer" CssClass="button" runat="server" Text="Logout" OnClick="btn_logout_Click" /></td>
+                    </tr>
+                </table>
+               
+               
+            </div>
+                 <ul id="nav">
+                   <li><a href="index.aspx">Home</a></li>
+                   <li><a href="index.aspx">About</a></li>
+                   <li><a href="index.aspx">News</a></li>
+                   <li><a href="index.aspx">Careers</a></li>
+                   <li><a href="index.aspx">Services</a></li>
+                   <li><a href="index.aspx">Contact Us</a></li>
+               </ul>  
+            
+          
+        
+          </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+
+        </div>
+    </div>
+    </form>
+</body>
+</html>

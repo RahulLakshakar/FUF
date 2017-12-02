@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterAdmin.master.cs" Inherits="FUFApplication.Admin.MasterAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../css/MasterAdminCss.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div id="header">
+           <table>
+               <tr>
+                   <td>
+                       <img src="../images/FUF6.png" width="150px" style="margin-top:-20px;"/></td>
+                   <td style="text-align:right;padding-right:2%;padding-top:10px;">
+                       <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                           <ContentTemplate>
+                               <asp:Label ID="lbl_timer" CssClass="timer" runat="server" Text="Label"></asp:Label>
+                                 <asp:Timer ID="Timer1" OnTick="Timer1_Tick" Interval="1000" runat="server"></asp:Timer><br />
+                           </ContentTemplate>
+                           <Triggers>
+                               <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                           </Triggers>
+                        </asp:UpdatePanel><br />
+                       <ul id="user_ul">
+                           <li class="main_list"><asp:Label ID="lbl_session" CssClass="session" Style="position:absolute;top:70px;right:6%" runat="server" Text="Label"></asp:Label></li>
+                            <li class="main_list" id="image"> <asp:Image ID="userImage" CssClass="userImage" runat="server" ></asp:Image>
+                                <ul>
+                                    <li id="user_option">
+                                      <a href="../Logout.aspx">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                       </ul>
+                      
+                   </td>
+               </tr>
+           </table>
+           
+        </div>
+        <div id="left">
+            <ul id="admin_menu">
+                <asp:BulletedList ID="BulletedList1" runat="server"></asp:BulletedList>
+                <a href="#"><li class="menu_list"><i class="fa fa-dashboard" aria-hidden="true" ></i> Dashboad</li></a>
+                <a href="#"><li class="menu_list"><i class="fa fa-search" aria-hidden="true" ></i> Search User</li></a>
+                <a href="#"><li class="menu_list"><i class="fa fa-plus" aria-hidden="true" ></i> Add User</li></a>
+                <a href="#"><li class="menu_list"><i class="fa fa-building" aria-hidden="true" ></i> Center Details</li></a>
+                <a href="#"><li class="menu_list"><i class="fa fa-dropbox" aria-hidden="true"></i> Package Details</li></a>
+                <a href="#"><li class="menu_list"><i class="fa fa-gear" aria-hidden="true" ></i> Settings</li></a>
+                <a href="#"><li class="menu_list"><i class="fa fa-gears" aria-hidden="true" ></i> Master Settings</li></a>
+            </ul>
+        </div>
+        <div id="right"></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
